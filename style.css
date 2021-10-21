@@ -1,0 +1,9 @@
+#app {
+    margin: 50px;
+}
+
+p {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    width: 100px;
+}
