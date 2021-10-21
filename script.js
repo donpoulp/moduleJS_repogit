@@ -1,9 +1,10 @@
-// new Vue({
-//     el: '#app',
-//     data: {
-//         show: false,
-//         value_test: 'valeur par défaut'
-//     }
-    
-// })
-console.log('hello')
+new Vue({
+    el: '#app',
+    data: {
+        message: '2022',
+        change:false,
+        value_test: '2023',
+        checkedColor:false,
+        show:false
+    },
+})
