@@ -1,18 +1,23 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <CitiesList/>
+      <nav>
+      <router-link :to="'/'">
+      Acceuil
+      </router-link>
+      <br>
+      <router-link :to="'/CitiesList'">
+      Liste des Villes
+      </router-link>
+      </nav>
+      <router-view></router-view>
   </div>
 </template>
 
 <script>
-import CitiesList from "./components/CitiesList.vue";
 
 export default {
   name: "App",
-  components: {
-    CitiesList,
-  },
 };
 </script>
 
