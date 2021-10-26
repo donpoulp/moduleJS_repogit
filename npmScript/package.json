@@ -1,0 +1,17 @@
+{
+  "name": "npmScript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "IMG": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "imagemin": "^7.0.1",
+    "imagemin-pngquant": "^9.0.2"
+  }
+}

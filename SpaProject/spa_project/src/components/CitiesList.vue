@@ -30,7 +30,7 @@ export default {
   created () {
     axios
       .get('https://api.openweathermap.org/data/2.5/find?lat=45.188&lon=5.724&cnt=20&cluster=yes&lang=fr&units=metric&APPID=7ab1824780ff60d1b78d8a5146c37ad1')
-      .then(response => (this.cities = response.data.list, console.log(response.data)))
+      .then(response => (this.cities = response.data.list))
       .catch(error => (this.error = error))
   },
 };
