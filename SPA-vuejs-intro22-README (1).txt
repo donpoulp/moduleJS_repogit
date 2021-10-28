@@ -173,7 +173,8 @@ Modifiez votre code, afin que:
 
 #### 4.2) Mise en forme des dates
 
-Un timestamp complet n'est pas agréable à lire, encore moins s'il est destiné à ultimement être répété dans une liste. La librairie `timeago.js` nous permet de formatter les dates pour afficher un temps relatif, plus parlant.
+Un timestamp complet n'est pas agréable à lire, encore moins s'il est destiné à ultimement être répété dans une liste.
+ La librairie `timeago.js` nous permet de formatter les dates pour afficher un temps relatif, plus parlant.
 
 Ajoutez la librairie à votre projet avec NPM pour afficher la valeur de `updatedAt` avec un temps relatif.
 
@@ -192,9 +193,11 @@ Afin d'étendre les capacité de votre application, il serait intéressant de po
 
 #### 5.1) Changement du nom de `HelloWorld`
 
-Etant donné que le composant `HelloWorld` va afficher les météos de plusieurs villes, il est souhaitable de changer son nom, afin qu'il reflète mieux l'utilité du composant.  
+Etant donné que le composant `HelloWorld` va afficher les météos de plusieurs villes, 
+il est souhaitable de changer son nom, afin qu'il reflète mieux l'utilité du composant.  
 
-Renommez ce composant en `CitiesList` et assurez vous que votre application est toujours fonctionnelle.
+Renommez ce composant en `CitiesList` et assurez vous que votre application est toujours
+ fonctionnelle.
 
 #### 5.2) Affichage des météos de plusieurs villes en réutilisant un même composant
 
@@ -275,9 +278,11 @@ app.use(router)
 
 #### 6.2) Configuration
 
-Une fois le router installé et prêt à l'emploi, nous voulons maintenant déclarer une route `/cities'` affichant la liste des villes.
+Une fois le router installé et prêt à l'emploi, nous voulons maintenant déclarer 
+une route `/cities'` affichant la liste des villes.
 
-Déclarez votre tableau de routes dans le fichier `index.js` du répertoire `router`, en faisant référence au composant `CitiesList`.
+Déclarez votre tableau de routes dans le fichier `index.js` du répertoire `router`,
+ en faisant référence au composant `CitiesList`.
 
 Initialisez l'objet routeur avec le tableau de routes à la création.
 
@@ -288,23 +293,32 @@ Supprimez enfin le composant `CitiesList` du template de votre composant `App`.
 
 #### 6.3) Utilisation
 
-Maintenant que le routage est en place et fonctionnel, il ne nous reste plus qu'à implémenter la navigation dans l'application! 
+Maintenant que le routage est en place et fonctionnel, il ne nous reste plus qu'à implémenter
+ la navigation dans l'application! 
 Pour cela, nous devons utiliser les deux composants fournis par VueRouter :
-- `<router-view></router-view>` permet d'afficher le contenu de la route correspondant au composant spécifié dans la déclaration.
+- `<router-view></router-view>` permet d'afficher le contenu de la route correspondant au
+ composant spécifié dans la déclaration.
 - `<router-link to=""></router-link>` permet de naviguer d'une page à l'autre
 
-Pour rendre l'exemple un peu plus intéressant, ajoutez un composant `Home` qui représentera votre page d'accueil. Ajoutez également une route `/` vers votre nouveau composant dans la configuration du routeur.
+Pour rendre l'exemple un peu plus intéressant, ajoutez un composant `Home` qui représentera
+ votre page d'accueil. Ajoutez également une route `/` vers votre nouveau composant dans la configuration du routeur.
 
 **Notes** :
-- Ne vous attardez pas trop sur la page d'accueil. Son unique but pour l'instant est de rajouter un chemin à la navigation.
+- Ne vous attardez pas trop sur la page d'accueil. Son unique but pour l'instant est de rajouter 
+un chemin à la navigation.
 
-Ajoutez maintenant `<router-view></router-view>` à la fin du template de votre composant `App`, et utilisez `<router-link to="MA_ROUTE"></router-link>` pour passer d'une page à l'autre dans le même composant.
+Ajoutez maintenant `<router-view></router-view>` à la fin du template de votre composant
+ `App`, et utilisez `<router-link to="MA_ROUTE"></router-link>` pour passer d'une page à l'autre dans le même composant.
 
-En vous rendant à l'url `/cities`, vous devriez retomber sur le même écran que vous aviez précédemment, avant la mise en place du routeur.
+En vous rendant à l'url `/cities`, vous devriez retomber sur le même écran que vous aviez précédemment,
+ avant la mise en place du routeur.
 
 #### 6.4) [OPTIONNEL] Ajout d'une redirection
 
-De manière similaire à de nombreux sites aujourd'hui, nous aimerions que notre page d'accueil se situe à l'URL `/home`. Mais afin de ne pas mettre en défaut la navigation du site en affichant une erreur pour l'adresse `/`, nous aimerions que tout utilisateur voulant se rendre à l'adresse `/` soit **automatiquement redirigé** vers la page `/home`.
+De manière similaire à de nombreux sites aujourd'hui, nous aimerions que notre page d'accueil se situe 
+à l'URL `/home`. Mais afin de ne pas mettre en défaut la navigation du site en affichant une erreur
+ pour l'adresse `/`, nous aimerions que tout utilisateur voulant se rendre à l'adresse `/` soit 
+ **automatiquement redirigé** vers la page `/home`.
 
 Mettez en place une redirection entre `/` et `/home`.
 
@@ -313,19 +327,27 @@ Mettez en place une redirection entre `/` et `/home`.
 
 ### 7 - [OPTIONNEL] Récupération des données via une API externe
 
-Jusqu'ici, les données météo étaient codées "en dur" dans les composants Vue.js. Pour rendre notre application plus concrète et réaliste, nous allons désormais faire appel à une API pour récupérer de véritables relevés météo des villes de la région.
+Jusqu'ici, les données météo étaient codées "en dur" dans les composants Vue.js. Pour rendre notre
+ application plus concrète et réaliste, nous allons désormais faire appel à une API pour récupérer de
+  véritables relevés météo des villes de la région.
 
-Pour cela, nous allons utiliser l'API [OpenWeatherMap](https://openweathermap.org/api). Cette dernière vous permettra de récupérer des données météo en ciblant un périmètre géographique.  
+Pour cela, nous allons utiliser l'API [OpenWeatherMap](https://openweathermap.org/api). 
+Cette dernière vous permettra de récupérer des données météo en ciblant un périmètre géographique.  
 
-Pour effectuer un test d'appel à l'API, récupérez d'abord une clé API auprès de la formatrice ou du formateur (ou créez un [compte gratuit OpenWeatherMap](https://home.openweathermap.org/users/sign_up)), puis accédez  à l'URL suivante: https://api.openweathermap.org/data/2.5/find?lat=45.188&lon=5.724&cnt=20&cluster=yes&lang=fr&units=metric&APPID=VOTRE_CLE_API
+Pour effectuer un test d'appel à l'API, récupérez d'abord une clé API auprès de la formatrice
+ ou du formateur (ou créez un [compte gratuit OpenWeatherMap](https://home.openweathermap.org/users/sign_up)), puis accédez  à l'URL suivante: https://api.openweathermap.org/data/2.5/find?lat=45.188&lon=5.724&cnt=20&cluster=yes&lang=fr&units=metric&APPID=VOTRE_CLE_API
 
-Quel est le format de retour des données de l'API? Quels sont les champs qui vont vous permettre de récupérer les données météo recherchées ?
+Quel est le format de retour des données de l'API? Quels sont les champs qui vont vous permettre de
+ récupérer les données météo recherchées ?
 
 #### 7.1) Installation d'une librairie permettant de faire des appels HTTP
 
-Pour pouvoir faire des appels à une API, Vue.js préconise l'utilisation de la librairie [axios](https://github.com/axios/axios).
+Pour pouvoir faire des appels à une API, Vue.js préconise l'utilisation de la librairie
+ [axios](https://github.com/axios/axios).
 
-Prenez le temps d'analyser cette librairie sur GitHub, qu'est ce qui vous inspire confiance? Ayez le réflexe de chercher la librairie sur [NPM](https://www.npmjs.com/package/axios), notamment pour voir le nombre de téléchargements.
+Prenez le temps d'analyser cette librairie sur GitHub, qu'est ce qui vous inspire confiance?
+ Ayez le réflexe de chercher la librairie sur [NPM](https://www.npmjs.com/package/axios), 
+ notamment pour voir le nombre de téléchargements.
 
 Une fois la librairie analysée et validée :
 - Intallez la librairie avec NPM
@@ -344,9 +366,12 @@ Comme vous avez pu le voir, une promesse a plusieurs états:
 - Terminée avec succès
 - Terminée avec erreur
 
-Nous souhaitons être en mesure de suivre ces états dans notre composant, par conséquent ajoutez à l'objet `data` deux propriétés `loading` et `error`, destinées à nous permettre de savoir si la requête est en cours, et si il y a eu une erreur.
+Nous souhaitons être en mesure de suivre ces états dans notre composant, par conséquent ajoutez
+ à l'objet `data` deux propriétés `loading` et `error`, destinées à nous permettre de savoir si 
+ la requête est en cours, et si il y a eu une erreur.
 
-Veillez aussi à retirer les données des villes que nous avons mis jusqu'à présent "en dur" dans l'objet `data`, car avec l'API nous n'en avons plus besoin!  
+Veillez aussi à retirer les données des villes que nous avons mis jusqu'à présent "en dur" dans 
+l'objet `data`, car avec l'API nous n'en avons plus besoin!  
 
 Votre `data` devrait désormais ressembler à ça:
 ```js

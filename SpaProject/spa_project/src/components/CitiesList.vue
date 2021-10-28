@@ -1,13 +1,18 @@
 <template>
-  <div class="hello">
+<div>
+  <div>
+    <p v-if="loading">En cours de chargement</p>
+    <p v-if="error">{{ error }}</p>
+  </div>
+  <div>
     <City
     v-for="city in cities" :key="city.id" 
     v-bind:name="city.name"
     v-bind:weather="city.weather[0].description" 
     v-bind:temperature="city.main.temp"
     />
-  <p>{{ cities.name }}</p>
   </div>
+</div>
 </template>
 
 <script>
@@ -17,7 +22,7 @@ import axios from "axios";
 
 export default {
   name: "CitiesList",
- components: {
+  components: {
     City,
   },
   data(){

@@ -1,19 +1,12 @@
 <template>
-  <div class="city">
-    <h1>{{ name }}</h1>
-    <p>{{ weather }}</p>
-    <p>{{ temperature }}</p>
+  <div class="SuppliersMap">
+    <h1>Map</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "City",
-  props: [
-    'name',
-    'weather',
-    'temperature'
-  ]
+  name: "SuppliersMap",
 };
 </script>
 
